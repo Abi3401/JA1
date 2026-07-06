@@ -1,0 +1,9 @@
+(myvenv) jeyam@Jeyam:~ $ python3 obd.py 
+Traceback (most recent call last):
+  File "/home/jeyam/obd.py", line 193, in <module>
+    app = CarDashboard()
+  File "/home/jeyam/obd.py", line 46, in __init__
+    GPIO.add_event_detect(FLOW_SENSOR_PIN, GPIO.FALLING, callback=self.count_pulse)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Failed to add edge detection
+(myvenv) jeyam@Jeyam:~ $ 
