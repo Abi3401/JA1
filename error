@@ -18,5 +18,42 @@ Traceback (most recent call last):
 RuntimeError: Failed to add edge detection
 (myvenv) jeyam@Jeyam:~/obd_reader $ 
 
+(myvenv) jeyam@Jeyam:~/obd_reader $ pip install rpi-lgpio
+Collecting rpi-lgpio
+  Downloading rpi_lgpio-0.6-py3-none-any.whl.metadata (2.5 kB)
+Collecting lgpio>=0.1.0.1 (from rpi-lgpio)
+  Downloading lgpio-0.2.2.0.tar.gz (90 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Downloading rpi_lgpio-0.6-py3-none-any.whl (11 kB)
+Building wheels for collected packages: lgpio
+  Building wheel for lgpio (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+  
+  × Building wheel for lgpio (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [8 lines of output]
+      running bdist_wheel
+      running build
+      running build_py
+      running build_ext
+      building '_lgpio' extension
+      swigging lgpio.i to lgpio_wrap.c
+      swig -python -o lgpio_wrap.c lgpio.i
+      error: command 'swig' failed: No such file or directory
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for lgpio
+Failed to build lgpio
+ERROR: Failed to build installable wheels for some pyproject.toml based projects (lgpio)
+
+
+
+
+
+
+
 
 
