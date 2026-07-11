@@ -1,8 +1,7 @@
-
 import obd
 import time
 
-# 1. Define the wireless network socket connection for the Wi-Fi ELM327 dongle
+# 1. Define the network socket connection for the Wi-Fi ELM327 dongle
 OBD_PORT = "socket://192.168.0.10:35000"
 
 print("Connecting to Wi-Fi OBD-II adapter...")
@@ -27,6 +26,11 @@ try:
                 print(f" -> {code}: {description}")
         else:
             print("\nNo errors found! The ECU clear flag is active.")
+            
+        # 5. Clear the stored Diagnostic Trouble Codes (Mode 04)
+        print("\nClearing stored DTCs and turning off Check Engine light...")
+        connection.query(obd.commands.CLEAR_DTC)
+        print("Clear command sent successfully!")
             
     else:
         print("\n[ERROR] Connected to adapter, but cannot talk to the car ECU.")
